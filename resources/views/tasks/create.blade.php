@@ -9,6 +9,9 @@
         {!! Form::label('subject', '件名:') !!}
         {!! Form::text('subject') !!}
         
+        {!! Form::label('status', 'ステータス：') !!}
+        {!! Form::text('status') !!}        
+        
         {!! Form::submit('登録') !!}
         
     {!! Form::close() !!}

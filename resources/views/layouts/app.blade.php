@@ -17,8 +17,10 @@
     <body>
         @include('commons.navbar')
         
-        @include('commons.error_messages')
-        
-        @yield('content')
+        <div class="container">
+            @include('commons.error_messages')
+            
+            @yield('content')
+        </div>
     </body>
 </html>

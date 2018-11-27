@@ -61,6 +61,7 @@ class TasksController extends Controller
         $request->user()->tasks()->create([
             'subject' => $request->subject,
             'status' => $request->status,
+            'user_id' => $request->id,
         ]);
         
         return redirect('/');
@@ -112,7 +113,6 @@ class TasksController extends Controller
             ]);
             
         $task = Task::find($id);
-        $task->user_id = $request->id;
         $task->status = $request->status;
         $task->subject = $request->subject;
         $task->save();
